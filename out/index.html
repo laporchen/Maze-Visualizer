@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+    <meta charset="utf-8" http-equiv="encoding">
+    <script src="./index.js" type='module'></script>
+</head>
+
+<body>
+    <title>Maze Pathfinder</title>
+    <div id='buttons'>
+        <button id='startBtn'>Load</button>
+        <button id='nextBtn'>Next</button>
+        <button id='prevBtn'>Prev</button>
+        <button id='autoBtn'>Auto</button>
+        <button id='resetBtn'>Reset</button>
+        <label class='upload tooltip'>Choose a maze file<input type='file' hidden>
+            <span class="tooltiptext">
+                # = wall<br>
+                O = start<br>
+                X = end <br>
+                space is path
+            </span>
+
+        </label>
+    </div>
+    <canvas id="maze" width="400" height="400"></canvas>
+
+</body>
+<style>
+    body {
+        background-color: rgb(80, 80, 80);
+    }
+
+    #maze {
+        background-color: white;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        max-width: 800px;
+        max-height: 800px;
+    }
+
+    #buttons {
+        align-items: center;
+        margin: auto;
+        width: 40%;
+        padding: 10px;
+    }
+
+    label {
+        background-color: white;
+        color: black;
+        padding: 10px;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        margin-top: 10px;
+        height: 50px;
+        width: 100px;
+        font-size: 20px;
+    }
+
+    button {
+        background-color: white;
+        padding: 0.5rem;
+        height: 50px;
+        width: 100px;
+        font-size: 20px;
+    }
+
+    .tooltip {
+        background-color: white;
+        color: black;
+        padding: 0.5rem;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        margin-top: 1rem;
+        height: 25px;
+        width: 50px;
+        font-size: 20px;
+    }
+
+    /* Tooltip text */
+    .tooltip .tooltiptext {
+        background-color: lightgray;
+        color: black;
+        visibility: hidden;
+        width: 120px;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        font-size: 12px;
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 1;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+</style>
+
+</html>
